@@ -14,3 +14,16 @@ class MySet:
 
     def size(self):
         return len(self.dictionary);
+
+    def clear(self):
+        self.dictionary.clear();
+
+    def __str__(self):
+        mkeys = self.dictionary.keys();
+        mystr = "MySet: {";
+        mkeystr = f"{mkeys}";
+        remstr = "dict_keys([";
+        mkeystr = mkeystr[len(remstr):len(mkeystr) - 2];
+        mystrs = mkeystr.split();
+        fkeystr = "".join(mystrs);
+        return mystr + fkeystr + "}";
